@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: ple-table
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ple-table/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_ple_table
+    libfuzzer: true
+    timeout: 10

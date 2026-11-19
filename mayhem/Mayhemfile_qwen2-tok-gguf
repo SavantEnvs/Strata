@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: qwen2-tok-gguf
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/qwen2-tok-gguf/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_qwen2_tok_gguf
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: quant-dequant
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/quant-dequant/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_quant_dequant
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: session-file
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/session-file/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_session_file
+    libfuzzer: true
+    timeout: 10

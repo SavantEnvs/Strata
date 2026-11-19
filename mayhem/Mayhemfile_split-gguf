@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: split-gguf
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/split-gguf/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_split_gguf
+    libfuzzer: true
+    timeout: 10

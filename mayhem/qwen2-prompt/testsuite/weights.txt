@@ -1,0 +1,1 @@
+a (red cat:1.2) on [the] mat, <lora:detail:0.6> \(escaped\) BREAK hello

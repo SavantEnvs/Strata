@@ -1,0 +1,11 @@
+project: savantenvs/Strata
+target: qwen2-prompt
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/qwen2-prompt/testsuite
+
+cmds:
+  - cmd: /mayhem/build-fuzz/fuzz_qwen2_prompt
+    libfuzzer: true
+    timeout: 10
